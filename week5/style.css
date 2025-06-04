@@ -1,0 +1,94 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+table {
+    border-collapse: collapse;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #12121c;
+    color: #fff;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+table:hover {
+    transform: scale(1.02);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 20px;
+    font-size: 28px;
+    border: none;
+    outline: none;
+    text-align: right;
+    background-color: #1e1e2f;
+    color: #00ffcc;
+    box-sizing: border-box;
+}
+
+td {
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    user-select: none;
+}
+
+td:hover {
+    background-color: #2d2d45;
+    transform: scale(1.05);
+}
+
+td:active {
+    transform: scale(0.95);
+}
+
+td[colspan="4"] {
+    background-color: #00ffcc;
+    color: #12121c;
+    font-weight: bold;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+td[colspan="4"]:hover {
+    background-color: #00ddaa;
+}
+
+td[colspan="1"]:last-child {
+    background-color: #ff5252;
+    color: #fff;
+}
+
+td[colspan="1"]:last-child:hover {
+    background-color: #ff3131;
+}
+
+td[onclick^="opBtnPressd"] {
+    background-color: #3e3e5c;
+}
+
+td[onclick^="opBtnPressd"]:hover {
+    background-color: #515178;
+}
+
+td[onclick="btnAc()"] {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+td[onclick="btnAc()"]:hover {
+    background-color: #e68900;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java test</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!-- Text section-->
+    <h1 id="heading1"></h1>
+    <p id="para1"></p>
+
+    <br>
+
+    <!-- NUMBER section-->
+    <h1 id="heading2"></h1>
+    <p id="para2"></p>
+
+    <br>
+
+    <!-- Conditions section (if els statiments)-->
+    <h1>CONDITIONS (IF ELS)</h1>
+    <p id="output"></p>
+
+    <br>
+
+    <!-- Functions section-->
+    <h1>Functions</h1>
+    <h2 id="heading3" onclick="changeText()"> JavaScript </h2>
+    <p id="addition"></p>
+
+
+    <!--------------------------- java script------------------------------------>
+    <script>
+
+        //JS TEXT ------------------------
+        var text1 = "This is JavaScript!";
+        var text2 = "I love learning JS!";
+        var text3 = " JS is awesome!";
+        document.getElementById("heading1").innerHTML = (text1);
+        document.getElementById("para1").innerHTML = (text2 + text3);
+
+        //JS NUMBER ------------------------
+        var headert = "Numbers";
+        var numA = "7";
+        var numB = "10";
+        document.getElementById("heading2").innerHTML = (headert);
+        document.getElementById("para2").innerHTML = (numA + " x " + numB + " = " + numA * numB);
+
+         //JS condition ------------------------
+        var userInputPassword = "007";
+        var actualPassword = "007";
+
+        if(userInputPassword == actualPassword){
+            document.getElementById("output").innerHTML = ("Correct password");
+        }else{
+            document.getElementById("output").innerHTML = ("Incorrect password. Try again")
+        }
+
+         //JS function ------------------------
+
+        document.getElementById("addition").innerHTML = addnumbers(10, 20);
+
+        function changeText(){
+
+        if(document.getElementById("heading3").innerHTML == 'JavaScript'){
+        document.getElementById("heading3").innerHTML = 'is awesome';
+        }else{
+        document.getElementById("heading3").innerHTML = 'JavaScript'
+        }
+
+        }
+
+        function addnumbers(num1, num2){
+            return num1 + num2;
+        }
+
+
+
+    </script>
+</body>
+</html>
